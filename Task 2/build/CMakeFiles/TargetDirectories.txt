@@ -1,0 +1,4 @@
+/c/git курсач/calculator/Task 2/build/CMakeFiles/calculator.dir
+/c/git курсач/calculator/Task 2/build/CMakeFiles/calculator_exec.dir
+/c/git курсач/calculator/Task 2/build/CMakeFiles/edit_cache.dir
+/c/git курсач/calculator/Task 2/build/CMakeFiles/rebuild_cache.dir
