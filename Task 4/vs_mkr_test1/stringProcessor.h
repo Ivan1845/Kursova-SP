@@ -1,22 +1,24 @@
 #ifndef STRING_PROCESSOR
 #define STRING_PROCESSOR
+
 #include <stdint.h>
 #include <stdbool.h>
 #include <malloc.h>
 #include <ctype.h>
 #include <stdio.h>
-//#include "sort.h"
+#include <iostream>
+
 #define STRING_MAX 512ull
 
-const size_t strlenn(const char* str)
+size_t strlenn(const char* str)
 {
     const char* s = str;
-    while (*s != '\0') 
+    while (*s != '\0')
         ++s;
     return s - str;
 }
 
-const int32_t get_str(const char const* msg, char* str, const int32_t limit)
+int32_t get_str(const char* msg, char* str, int32_t limit)
 {
     std::cout << msg << "\n";
     if (fgets(str, limit, stdin) != NULL)
@@ -29,12 +31,12 @@ const int32_t get_str(const char const* msg, char* str, const int32_t limit)
     return -1;
 }
 
-void strcopy(char* fStr, char* sStr, size_t until)
+void strcopy(char* fStr, const char* sStr, size_t until)
 {
     for (size_t i = 0; i < until; i++)
     {
         fStr[i] = sStr[i];
-        if (sStr[i] == '\0') 
+        if (sStr[i] == '\0')
             break;
     }
 }
@@ -60,7 +62,7 @@ char* strcatt(char* fStr, const char* sStr)
     return fStr;
 }
 
-bool is_string_valid(char* str)
+bool is_string_valid(const char* str)
 {
     bool isThereString = false;
     bool isThereColon = false;
