@@ -16,15 +16,15 @@ pipeline {
 
         stage('Build') {
             steps {
-                // Збірка проекту за допомогою MSBuild
-                bat '"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" "${workspace}\\Task 4\\vs_mkr_test1\\test_repos.sln" /t:Build /p:Configuration=Release'
+                // Збірка проєкту за допомогою MSBuild
+                bat '"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" "Task 4\\vs_mkr_test1\\test_repos.sln" /t:Build /p:Configuration=Release'
             }
         }
 
         stage('Test') {
             steps {
                 // Запуск тестів
-                bat '"${workspace}\\Task 4\\vs_mkr_test1\\x64\\Debug\\test_repos.exe" --gtest_output=xml:test_report.xml'
+                bat '"Task 4\\vs_mkr_test1\\x64\\Debug\\test_repos.exe" --gtest_output=xml:test_report.xml'
             }
         }
     }

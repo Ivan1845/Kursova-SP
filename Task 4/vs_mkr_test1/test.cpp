@@ -18,8 +18,6 @@ TEST(QuickSortTest, SortsArrayInAscendingOrder)
     }
 }
 
-
-
 TEST(QuickSortTest, SingleElementArray) {
     // Test sorting an array with a single element.
     char* arr[] = { "hello" };
@@ -59,7 +57,6 @@ TEST(QuickSortTest, RandomArray) {
     ASSERT_STREQ(arr[7], "world");
 }
 
-
 TEST(StringProcessorTest, ValidString_ReturnsTrue)
 {
     char str[] = "Valid string: apple, banana; cherry";
@@ -73,6 +70,7 @@ TEST(StringProcessorTest, InvalidString_ReturnsFalse)
     bool isValid = is_string_valid(str);
     EXPECT_FALSE(isValid);
 }
+
 // Test swap function
 TEST(SwapTest, SwapsValuesCorrectly)
 {
@@ -84,4 +82,3 @@ TEST(SwapTest, SwapsValuesCorrectly)
     EXPECT_STREQ(a, "banana");
     EXPECT_STREQ(b, "apple");
 }
-
